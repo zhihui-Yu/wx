@@ -1,0 +1,19 @@
+<!--pages/news/news-detail/news-detail.wxml-->
+<view class="news-detail-container">
+  <image class="topImage" src="../../images/banner2.jpg"/>
+  <text class="title">{{ title }}</text>
+  <view class="author-info">
+    <image class="author-icon" src="{{ authorIcon }}"></image>
+    <text class="author-name">{{ authorName }}</text>
+    <text class="author-date">{{ authorDate }}</text>
+
+    <view class="article-like">
+      <image bindtap="playerMusicTap" class="article-like-icon" src="{{ isPlayer ? '../../images/earphone.png' : '../../images/eartag.png'}}"/>
+      <image catchtap="collectTap" wx:if="{{collected}}" class="article-like-icon" src="../../images/sch.png"/>
+      <image catchtap="collectTap" wx:else  class="article-like-icon" src="../../images/sc.png"/>
+      <image class="article-like-icon" src="../../images/fx.png"/>
+    </view>
+	</view>
+  <image class="text-image" src="{{articleImg}}"></image>
+  <text class="article-text">{{ articleText }}</text>
+</view>

@@ -20,6 +20,8 @@
 		...item 后只要写 name
 		is 指定模块的名称 => 就是template标签上的name
 	 -->
+	 <view bindtap="goNewsDetail" data-newsid="{{ item.newsid }}">
       <template is="newsTemplate" data="{{ ...item}}"></template>
+	 </view>
   </block>
 </view>

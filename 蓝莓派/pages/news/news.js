@@ -13,15 +13,13 @@ Page({
     this.setData({
       news_Data:newsData.newsData
     })
+  },
+  //跳转详情页
+  goNewsDetail: function(event) {
+    //console.log(event)
+    var newsId = event.currentTarget.dataset.newsid;
+    wx.navigateTo({
+      url: 'news-detail/news-detail?newsid='+ newsId
+    })
   }
-  /**
-   * 跳转详情页
-   * @param {*} evnet 
-   */
-  // goNewsDetail : function(evnet) {
-  //   var newsId = event.currentTarget.dataset.newsId;
-  //   wx.navigateTo({
-  //     url: 'news-detail/news-detail?newsid='+ newsId
-  //   })
-  // }
 })
