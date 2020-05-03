@@ -1,0 +1,12 @@
+<wxs src="../../wxs/subUtils.wxs" module="tools"/>
+
+<template name="starTemplate">
+  <view class="stars-container">
+    <view class="stars">
+      <block wx:for="{{ tools.starUtil(average) }}" wx:key="key" wx:for-item="item">
+        <image src="{{ item ? '../images/star.png': '../images/chat.png'}}"></image>
+      </block>
+    </view>
+    <text class="star-score">{{average}}</text>
+  </view>
+</template>

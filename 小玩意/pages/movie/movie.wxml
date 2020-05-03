@@ -1,0 +1,22 @@
+<import src="movie-list-template/movie-list-template.wxml"/>
+
+<!-- 搜索框  -->
+<view class="search">
+
+    <input type="text" placeholder="暂时不可用" placeholder-class="placeholder" bindfocus="onBindFocus" bindconfirm="onBindBlur"/>
+    <image class="xx-img" src="images/xx.png" bindtap="onCancelImgTap"></image>
+</view>
+<!-- 一般情况显示 -->
+<view class="movie-detail" wx:if="{{!searchPanelShow}}">
+  <template is="movieListTemplate" data="{{...inTheaters}}"/>
+  <template is="movieListTemplate" data="{{...comingSoon}}"/>
+  <template is="movieListTemplate" data="{{...top250}}"/>
+</view>
+<!-- 搜索结果显示 -->
+<view class="search-panel" wx:if="{{searchPanelShow}}">
+    <block wx:for="{{movies}}" wx:for-item="item" wx:key="key">
+      <view class="single-view-container">
+        <template is="movieTemplate" data="{{...item}}"/>
+      </view>
+    </block>
+</view>

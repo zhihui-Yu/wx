@@ -1,7 +1,7 @@
 <view class="index-container">
   <image class="logo" src="../images/logo.png"></image>
-  <text class="username">hello,wx</text>
+  <text class="username"></text>
   <view class="btn" bindtap="goNews">
-    <text>和音乐一起分享时光</text>
+    <text>进入不一样的世界</text>
   </view>
 </view>

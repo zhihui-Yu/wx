@@ -1,0 +1,16 @@
+.play-container {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 600;
+  margin-top: 40rpx;
+}
+video{
+  margin-left: 10%;
+  margin-top: 40rpx;
+  width: 80%;
+
+}

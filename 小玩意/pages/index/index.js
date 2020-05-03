@@ -4,8 +4,8 @@ Page({
     
   },
   goNews:function(event){
-    wx.navigateTo({
-      url: '../news/news',
+    wx.switchTab({
+      url: '../movie/movie'
     })
   }
 })

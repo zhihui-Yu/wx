@@ -11,7 +11,7 @@ var newsData = [
       "articleLikeComment":"12",
       "articleLikeSC":"30",
       "music":{
-          "url":"http://122.226.161.16/amobile.music.tc.qq.com/C400000ztCN32ejxRm.m4a?guid=2796982635&vkey=86077784403C2BE9D51202FCEA75D59351073BEAED38309B75D139D0F4C4DBCD80766A324D8C3EB033C05EE114DECBBA3BDCF5BD4D76C6D3&uin=1899&fromtag=66",
+          "url":"https://api.qq.jsososo.com/song/find?key=Jam%2f南",
           "title":"南",
           "coverImg":""
       }
@@ -28,7 +28,7 @@ var newsData = [
       "articleLikeComment":"12",
       "articleLikeSC":"30",
       "music":{
-          "url":"http://122.226.161.16/amobile.music.tc.qq.com/C4000020wJDo3cx0j3.m4a?guid=2796982635&vkey=9DE024F923FFFC1D47A126E369B0DBB62C5A5C00EF9642D7B74A5780806D53D8418900D955D9AB62F2F29FEE89D69AFE16542702D9F859A2&uin=1899&fromtag=66",
+          "url":"https://api.qq.jsososo.com/song/find?key=周杰伦%2f稻香",
           "title":"稻香",
           "coverImg":""
       }
@@ -45,7 +45,7 @@ var newsData = [
       "articleLikeComment":"12",
       "articleLikeSC":"30",
       "music":{
-          "url":"http://122.226.161.16/amobile.music.tc.qq.com/C400001mp8I00fMo1r.m4a?guid=2796982635&vkey=D287B68AD6925DA35F97DBF69F1994D28A9B42B9477670C4859380B01961859FEEDF63A5E54E1E3A5C66B65F0A271BD455CCB0406AAC97B0&uin=1899&fromtag=66",
+          "url":"https://api.qq.jsososo.com/song/find?key=京田诚一%2fSnowflakes",
           "title":"Snowflakes",
           "coverImg":""
       }

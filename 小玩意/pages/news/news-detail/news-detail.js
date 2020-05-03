@@ -1,5 +1,6 @@
 // pages/news/news-detail/news-detail.js
 var newsData = require("../../data/newsData.js")
+const innerAudioContext = wx.createInnerAudioContext()
 Page({
   /**
    * 页面的初始数据
@@ -10,11 +11,20 @@ Page({
   },
   onLoad:function(options){
     //加载音频
-    this.setData({
-      innerAudioContext :wx.createInnerAudioContext()
+    innerAudioContext.autoplay = false
+    var that = this;
+    wx.request({
+      url: newsData.newsData[options.newsid].music.url,
+      header: {
+        'content-type': 'application/xml' 
+      },
+      success (res) {
+        innerAudioContext.src = res.data.data.url;
+        that.setData({
+          innerAudioContext : innerAudioContext
+        })
+      }
     })
-    this.data.innerAudioContext.autoplay = false
-    this.data.innerAudioContext.src = newsData.newsData[options.newsid].music.url
 
     this.setData(newsData.newsData[options.newsid])
     //为了其他方法也能用到newsid
@@ -46,6 +56,9 @@ Page({
       wx.setStorageSync('newsCollect', newsCollect)
     }
   },
+  onUnload: function () {
+    this.data.innerAudioContext.pause();
+  },
   collectTap:function(event) {
     //获取本地存储值
     var newsCollect = wx.getStorageSync('newsCollect');
@@ -72,13 +85,13 @@ Page({
       //播放
       this.data.innerAudioContext.play();
     }
-    // this.audioCtx.onPlay(() => {
+    // this.data.innerAudioContext.onPlay(() => {
     //   console.log('开始播放')
     // })
-    // this.audioCtx.onPause(()=> {
+    // this.data.innerAudioContext.onPause(()=> {
     //   console.log('停止播放')
     // })
-    // this.audioCtx.onError((res) => {
+    // this.data.innerAudioContext.onError((res) => {
     //   console.log(res.errMsg)
     //   console.log(res.errCode)
     // })

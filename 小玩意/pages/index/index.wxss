@@ -6,8 +6,8 @@
 }
 
 .index-container .logo {
-  width: 392rpx;
-  height: 96rpx;
+  width: 480rpx;
+  height: 200rpx;
   margin-top: 162rpx;
 }
 .index-container .username{
@@ -16,11 +16,11 @@
   font-weight: 700;
 }
 .index-container .btn {
-  border: 1px solid #109D59;
+  border: 1px solid rgb(76, 192, 221);
   margin-top: 300rpx;
   padding: 5px 10px;
   border-radius: 5rpx;
 }
 .index-container .btn text{
-  color: #109D59;
+  color: rgb(76, 192, 221);
 }
